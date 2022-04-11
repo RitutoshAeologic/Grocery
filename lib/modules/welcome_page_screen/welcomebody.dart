@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery/utils/style.dart';
+import '../../router.dart';
 import '../details_page_screen/detailspage.dart';
 import 'category/category_ui/category_list.dart';
 
@@ -78,7 +79,7 @@ class WelcomeBody extends StatelessWidget {
                             ),
                             child:
                             IconButton(
-                              onPressed: (){},
+                              onPressed: () => Navigator.pushNamed(context, Routes.noInternetScreen),
                               padding: EdgeInsets.only(right: 20.0,bottom: 10.0),
                               icon: Icon( Icons.short_text,color: Colors.white,size: 50,
                               ),
@@ -150,11 +151,10 @@ class WelcomeBody extends StatelessWidget {
                                                   bottomLeft: Radius.circular(10) ),
                                             ),
                                             child: IconButton(
-                                              onPressed: (){ Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>  const DetailsPage()));
-                                              },
+                                                onPressed: () =>
+                                                    Navigator.pushNamed(
+                                                        context,
+                                                        Routes.detailscreen),
                                               padding: EdgeInsets.only(right: 20.0,bottom: 10.0),
                                               icon: Icon( Icons.add,color: Colors.white,size: 50,
                                               ),
@@ -223,7 +223,7 @@ class WelcomeBody extends StatelessWidget {
                                             ),
                                             child:
                                             IconButton(
-                                              onPressed: (){},
+                                              onPressed: () => Navigator.pushNamed(context, Routes.noInternetScreen),
                                               padding: EdgeInsets.only(right: 20.0,bottom: 10.0),
                                               icon: Icon( Icons.add,color: Colors.white,size: 50,
                                               ),

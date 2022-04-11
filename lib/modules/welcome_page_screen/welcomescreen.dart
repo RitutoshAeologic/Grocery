@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../../router.dart';
 import 'welcomebody.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -21,19 +22,19 @@ class WelcomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              onPressed: (){},
+              onPressed: () => Navigator.pushNamed(context, Routes.homeScreen),
               icon: Icon(Icons.home,color: Colors.grey,size: 38,),),
             IconButton(
-              onPressed: (){},
+              onPressed: () => Navigator.pushNamed(context, Routes.noInternetScreen),
               icon: Icon(Icons.favorite_border_sharp, color: Colors.grey,size: 38,),),
             IconButton(
-              onPressed: (){},
+              onPressed: () => Navigator.pushNamed(context, Routes.noInternetScreen),
               icon: Icon(Icons.circle,color: Colors.blue.shade200,size: 38,),),
             IconButton(
-              onPressed: (){},
+              onPressed: () => Navigator.pushNamed(context, Routes.noInternetScreen),
               icon: Icon(Icons.shopping_cart_outlined,color: Colors.grey,size: 38,),),
             IconButton(
-              onPressed: (){},
+              onPressed: () => Navigator.pushNamed(context, Routes.noInternetScreen),
               icon: Icon(Icons.person_rounded,color: Colors.grey,size: 38, ),),
 
           ],

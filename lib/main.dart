@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:grocery/router.dart';
 
 import 'modules/home_page_screen/homescreen.dart';
 
@@ -18,6 +19,8 @@ class MyApp extends StatelessWidget {
     return  const MaterialApp(
       debugShowCheckedModeBanner: false,
             home: HomeScreen(),
+      onGenerateRoute: RouterApp.generateRoute,
+      initialRoute: Routes.homeScreen,
     );
   }
 }

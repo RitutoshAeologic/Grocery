@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:grocery/components/material_button.dart';
 import 'package:grocery/modules/welcome_page_screen/welcomescreen.dart';
 
+import '../../router.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -194,9 +196,8 @@ class HomeScreen extends StatelessWidget {
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold
                         ),
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const WelcomeScreen()));
-                        }),
+                        onTap: () => Navigator.pushNamed(context, Routes.welcomeScreen),
+                    ),
                   ],
                 ),
               ),
