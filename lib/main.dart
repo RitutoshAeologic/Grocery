@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:grocery/screen/homescreen.dart';
-import 'package:grocery/screen/mainscreen.dart';
+
+import 'modules/home_page_screen/homescreen.dart';
+
 
 
 
