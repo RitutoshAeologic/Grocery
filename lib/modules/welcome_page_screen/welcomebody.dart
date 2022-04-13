@@ -332,12 +332,12 @@ class WelcomeBody extends StatelessWidget {
                     )
                   ),
                   SizedBox(height: size.height*0.025,),
-                  Padding(padding: EdgeInsets.only(left: 20,right: 20),
+                  Padding(padding: EdgeInsets.only(left: 20,right: 10),
                       child: ClipRRect(
                       borderRadius: BorderRadius.circular(30),
                           child: Container(
                             height: size.height*0.18,
-                            width: MediaQuery.of(context).size.width*0.8,
+                            width: MediaQuery.of(context).size.width*1,
                             color: Colors.white,
                             child: Image.asset("assets/image4.jpg",fit: BoxFit.fitWidth,),
                           )
