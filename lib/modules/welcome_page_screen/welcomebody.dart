@@ -104,7 +104,7 @@ class WelcomeBody extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.only(left: 20.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Container(
                             height: size.height*0.4,
@@ -131,6 +131,7 @@ class WelcomeBody extends StatelessWidget {
                                 SizedBox(height: size.height*0.01,),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -204,6 +205,7 @@ class WelcomeBody extends StatelessWidget {
                                 SizedBox(height: size.height*0.01,),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -220,12 +222,86 @@ class WelcomeBody extends StatelessWidget {
 
                                       ],
                                     ),
-                                    SizedBox(width: size.width*0.15,),
+                                    SizedBox(width: size.width*0.18,),
                                     Column(
                                       children: [
                                         Container(
                                             height: size.height*0.06,
-                                            width: size.width*0.13,
+                                            width: size.width*0.12,
+                                            decoration: BoxDecoration(
+                                              color: Colors.blue.shade200,
+                                              borderRadius: BorderRadius.only(
+                                                  topLeft: Radius.circular(10),
+                                                  bottomLeft: Radius.circular(10) ),
+                                            ),
+                                            child: IconButton(
+                                              onPressed: () =>
+                                                  Navigator.pushNamed(
+                                                      context,
+                                                      Routes.detailscreen),
+                                              padding: EdgeInsets.only(right: 20.0,bottom: 10.0),
+                                              icon: Icon( Icons.add,color: Colors.white,size: 45,
+                                              ),
+                                            )
+                                        )
+                                      ],
+                                    )
+
+                                  ],
+                                )
+
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: size.width*0.05,),
+                          Container(
+                            height: size.height*0.4,
+                            width: size.width*0.55,
+                            padding: EdgeInsets.only(left: 10,),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child:
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  height: size.height*0.28,
+                                  width: size.width*1,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Image.asset("assets/image3.jpeg"),
+                                ),
+                                Text("Tomato",style: AppStyles.blackSmallBoldFont,),
+                                SizedBox(height: size.height*0.01,),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("Vegetables",style: AppStyles.greySmallFont,),
+                                        SizedBox(height: size.height*0.005,),
+                                        Text("\$ 11,49",
+                                          style:
+                                          TextStyle(
+                                              color: Colors.blue.shade200,
+                                              fontFamily: "Montserrat",
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 22),),
+
+                                      ],
+                                    ),
+                                    SizedBox(width: size.width*0.18,),
+                                    Column(
+                                      children: [
+                                        Container(
+                                            height: size.height*0.06,
+                                            width: size.width*0.12,
                                             decoration: BoxDecoration(
                                               color: Colors.blue.shade200,
                                               borderRadius: BorderRadius.only(
