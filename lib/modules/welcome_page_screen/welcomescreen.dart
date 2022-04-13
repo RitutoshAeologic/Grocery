@@ -1,9 +1,9 @@
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
+import 'package:grocery/modules/welcome_page_screen/welcomebody.dart';
 import '../../router.dart';
-import 'welcomebody.dart';
+
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -40,7 +40,7 @@ class WelcomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: const WelcomeBody(),
+      body:  WelcomeBody(),
       backgroundColor: Colors.blue.shade50,
     );
   }

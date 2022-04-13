@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:grocery/modules/details_page_screen/detailspage.dart';
 import 'package:grocery/modules/home_page_screen/homescreen.dart';
@@ -10,12 +9,12 @@ class RouterApp {
     switch (settings.name) {
       case Routes.homeScreen:
         return MaterialPageRoute(
-            builder: (BuildContext context) => const HomeScreen());
+            builder: (BuildContext context) =>  HomeScreen());
       case Routes.welcomeScreen:
         return MaterialPageRoute(
             builder: (BuildContext context) => const WelcomeScreen());
       case Routes.detailscreen:
-        return MaterialPageRoute(builder: (BuildContext context) => const DetailsPage());
+        return MaterialPageRoute(builder: (BuildContext context) =>  DetailsPage());
       default:
         return MaterialPageRoute(
           builder: (BuildContext context) => Scaffold(

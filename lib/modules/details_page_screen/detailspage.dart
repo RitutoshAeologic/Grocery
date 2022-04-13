@@ -3,16 +3,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:grocery/components/countercart.dart';
 import 'package:grocery/components/material_button.dart';
 import 'package:grocery/components/ratingicon.dart';
-import 'package:grocery/modules/welcome_page_screen/welcomescreen.dart';
 import 'package:grocery/router.dart';
 import 'package:grocery/utils/style.dart';
 
 
 class DetailsPage extends StatelessWidget {
-  const DetailsPage({Key? key}) : super(key: key);
+  DetailsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(top: 5),
@@ -20,8 +20,8 @@ class DetailsPage extends StatelessWidget {
         Column(
             children: [
             Container(
-            height: 320.0,
-            width: double.infinity,
+            height: size.height*0.35,
+            width: size.width*1,
             decoration: const  BoxDecoration(
               borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(90),
@@ -36,9 +36,9 @@ class DetailsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                      margin: const EdgeInsets.only(left: 20,right: 20,top: 20),
-                      height: 45,
-                      width: 45,
+                      margin: const EdgeInsets.only(left: 20,right: 20,top: 10),
+                      height: size.height*0.06,
+                      width: size.width*0.12,
                       decoration: BoxDecoration(
                         color: Colors.blue.shade200,
                         borderRadius: const BorderRadius.all(Radius.circular(10) ),
@@ -57,9 +57,9 @@ class DetailsPage extends StatelessWidget {
                       )
                   ),
                   Container(
-                      margin: const EdgeInsets.only(left: 20,right: 20,top: 20),
-                      height: 45,
-                      width: 45,
+                      margin: const EdgeInsets.only(left: 20,right: 20,top: 10),
+                      height: size.height*0.06,
+                      width: size.width*0.12,
                       decoration: BoxDecoration(
                         color: Colors.blue.shade200,
                         borderRadius: const BorderRadius.all(Radius.circular(10) ),
@@ -77,7 +77,7 @@ class DetailsPage extends StatelessWidget {
 
               )
             ),
-              const SizedBox(height: 30,),
+               SizedBox(height: size.height*0.040,),
               Padding(padding:  const EdgeInsets.only(left: 20,right: 20,),
               child:
               Row(
@@ -86,17 +86,18 @@ class DetailsPage extends StatelessWidget {
                   Text("Delicious Avocado", style:
                   AppStyles.blackBoldFont,
                     textAlign: TextAlign.left,),
-                  const SizedBox(height: 10,),
+                  SizedBox(height: size.height*0.010,),
                 ],
               ),),
               const SizedBox(height: 20,),
               Padding(padding:  const EdgeInsets.only(left: 20,right: 20,),
 
               child:  Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   RatingIcon(),
                   Text("(4.9)", style: AppStyles.greySmallFont,),
-                   const SizedBox(width: 105,),
+                  SizedBox(width: 100,),
                   CounterCartState(),
                   // Container(
                   //     height: 40,
@@ -136,7 +137,7 @@ class DetailsPage extends StatelessWidget {
                 ],
               ), ),
 
-              const SizedBox(height:15,),
+               SizedBox(height: size.height*0.018,),
               Padding(padding: const EdgeInsets.only(left: 20,right: 20,),
               child: Row(
                 children:  [
@@ -144,7 +145,7 @@ class DetailsPage extends StatelessWidget {
                     textAlign: TextAlign.left,),
                 ],),),
 
-              const SizedBox(height:15,),
+              SizedBox(height:size.height*0.018,),
               Padding(padding: const EdgeInsets.only(left: 20,right: 20,),
                   child:Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -163,14 +164,14 @@ class DetailsPage extends StatelessWidget {
                         textAlign: TextAlign.left,),
                     ],), ),
 
-              const SizedBox(height: 25,),
+              SizedBox(height: size.height*0.028,),
               Padding(padding: const EdgeInsets.only(left: 20,right: 20,),
                   child:
                   ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: Container(
-                        height: 150,
-                        width: 350,
+                        height: size.height*0.18,
+                        width: MediaQuery.of(context).size.width,
                         color: Colors.white,
                         child: Image.asset("assets/image7.png",fit: BoxFit.fitWidth,
                         )
@@ -179,7 +180,7 @@ class DetailsPage extends StatelessWidget {
               ),
 
 
-              const SizedBox(height: 15,),
+              SizedBox(height: size.height*0.018,),
               Padding(padding: const EdgeInsets.only(left: 20,right: 20,),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -200,7 +201,7 @@ class DetailsPage extends StatelessWidget {
 
                         ],
                       ),
-                      const SizedBox(width: 5,),
+                      SizedBox(width: size.width*0.005,),
                       Column(
                         children: [
                           // MaterialButton(
@@ -227,7 +228,7 @@ class DetailsPage extends StatelessWidget {
                           MaterialButtonBox(
                               backgroundColor: Colors.green.shade300,
                               title: "Add to Card",
-                              size: 130,
+                            widthsize: MediaQuery.of(context).size.width*0.4,
                               titleStyle: const
                               TextStyle(
                                   fontFamily: "Montserrat",
